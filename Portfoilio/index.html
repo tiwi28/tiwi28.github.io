@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiwi Asaba - CS Student</title>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Tiwi Asaba</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button class="theme-toggle" onclick="toggleTheme()">🌙</button></li>
+            </ul>
+            <div class="mobile-menu-btn">
+
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="fade-in">
+            <h1>Hi, I'm Tiwi Asaba!</h1>
+            <p class="subtitle">I'm a First-Year Computer Science Student</p>
+            <p>Passionate about technology, problem-solving, and building innovative solutions. Currently studying at the University of Waterloo and seeking <b>Summer 2026 internship opportunities</b>.</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-content fade-in">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>I'm a first-year Computer Science student at the University of Waterloo with a passion for technology and innovation. I love tackling complex problems and am always eager to learn new technologies and frameworks.</p>
+                <p>When I'm not coding, you can find me, exploring new programming concepts, working on personal projects, or at the gym.</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">C#</span>
+                        <span class="skill-tag">JavaScript</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Technologies & Frameworks</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Sci-Kit Learn</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">WPILib</span>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title fade-in">My Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card fade-in">
+                <h3>Ceto</h3>
+                <p>
+                    A competition robot built to tackle complex game challenges through precise
+                    control and efficient design. I led the development of the robot code,
+                    developing and tuning control systems, as well as implementing autonomous routines,
+                     to ensure consistent performance during matches.
+                </p>
+                
+                <div class="project-tech">
+                    <span class="tech-tag">Java</span>
+                    <span class="tech-tag">WPILib</span>
+                    <span class="tech-tag">Choreo + PathPlanner</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://www.youtube.com/watch?v=DGeICIk3WPo" target="_blank">Live Demo</a>
+                    <a href="https://github.com/FRC3161/Reefscape2025/tree/SwerveGen" target="_blank">GitHub</a>
+                </div>
+            </div>
+            
+            <div class="project-card fade-in">
+                <h3>PL Predicts</h3>
+                <p>Developed a Random Forest regression model that uses historical player data,
+                     performance trends, and fixture difficulty to predict Fantasy Premier League
+                      points for the next five matches.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Flask</span>
+                    <span class="tech-tag">Sci-Kit Learn </span>
+                    <span class="tech-tag">HTML/CSS</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" target="_blank">Live Demo</a>
+                    <a href="https://github.com/tiwi28/PLPredicts" target="_blank">GitHub</a>
+                </div>
+            </div>
+
+            <!-- <div class="project-card fade-in">
+                <h3>Plus Ultra (in progress)</h3>
+                <p>A to-do list app built to manage daily tasks and assignments</p>
+                <div class="project-tech">
+                    <span class="tech-tag">idk</span>
+                    <span class="tech-tag">Flask</span>
+                    <span class="tech-tag">JavaScript</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" target="_blank">Live Demo</a>
+                    <a href="#" target="_blank">GitHub</a>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-content fade-in">
+            <h2 class="section-title">Let's Connect</h2>
+            <p>I'm always open to discussing new opportunities, collaborating on projects, or just having a conversation about technology!</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    
+                    <a href="mailto:basaba@uwaterloo.ca">
+                        <h3>Email</h3>
+                    </a>
+                </div>
+                <div class="contact-item">
+                    <a href="https://linkedin.com/in/tiwi-asaba" target="_blank">
+                        <h3 class="contact-text">LinkedIn</h3>
+                    </a>
+                </div>
+                <div class="contact-item">
+                     <a href="https://github.com/tiwi28" target="_blank">
+                        <h3 class="contact-text">GitHub</h3>
+                    </a>
+
+                </div>
+            </div>
+            
+            <a href="mailto:basaba@uwaterloo.ca" class="btn btn-primary">Send Me an Email</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Tiwi Asaba. Built with ❤️ + ☕.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
