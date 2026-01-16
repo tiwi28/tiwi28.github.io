@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" onerror="fetch('http://127.0.0.1:7242/ingest/9bb22711-365a-4cba-a649-3ce91773d604',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'index.html:css-link',message:'CSS failed to load',data:{href:'style.css',error:'Failed'},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'B'})}).catch(()=>{});" onload="fetch('http://127.0.0.1:7242/ingest/9bb22711-365a-4cba-a649-3ce91773d604',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'index.html:css-link',message:'CSS loaded successfully',data:{href:'style.css'},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'B'})}).catch(()=>{});">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tiwi Asaba</title>
 </head>
@@ -15,7 +15,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <img src="logo.png" alt="Tiwi Asaba" class="logo-img">
+                <img src="logo.png" alt="Tiwi Asaba" class="logo-img" onerror="fetch('http://127.0.0.1:7242/ingest/9bb22711-365a-4cba-a649-3ce91773d604',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'index.html:logo-img',message:'Logo image failed to load',data:{src:'logo.png',error:'Failed'},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'C'})}).catch(()=>{});" onload="fetch('http://127.0.0.1:7242/ingest/9bb22711-365a-4cba-a649-3ce91773d604',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'index.html:logo-img',message:'Logo image loaded',data:{src:'logo.png'},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'C'})}).catch(()=>{});">
             </div>
             <ul class="nav-links">
                 <li><a href="#home">HOME</a></li>
@@ -36,7 +36,7 @@
 
                 </div>
                 <div class="hero-image">
-                    <img src="tiwi_headshot.png" alt="Tiwi Asaba" class="headshot-img">
+                    <img src="tiwi_headshot.png" alt="Tiwi Asaba" class="headshot-img" onerror="fetch('http://127.0.0.1:7242/ingest/9bb22711-365a-4cba-a649-3ce91773d604',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'index.html:headshot-img',message:'Headshot image failed to load',data:{src:'tiwi_headshot.png',error:'Failed'},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'C'})}).catch(()=>{});" onload="fetch('http://127.0.0.1:7242/ingest/9bb22711-365a-4cba-a649-3ce91773d604',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'index.html:headshot-img',message:'Headshot image loaded',data:{src:'tiwi_headshot.png'},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'C'})}).catch(()=>{});">
                 </div>
             </div>
             <p class="description">I'm a first-year Computer Science student at the University of Waterloo with a passion for technology and innovation. I love tackling complex problems and am always eager to learn new technologies and frameworks.</p>
@@ -182,6 +182,34 @@
     </section>
 
 
-    <script src="app.js"></script>
+    <script src="app.js" onerror="fetch('http://127.0.0.1:7242/ingest/9bb22711-365a-4cba-a649-3ce91773d604',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'index.html:js-script',message:'app.js failed to load',data:{src:'app.js',error:'Failed'},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'D'})}).catch(()=>{});"></script>
+    <script>
+        // #region agent log
+        (function() {
+            const logData = {
+                location: 'index.html:page-load',
+                message: 'Page loaded - checking resource availability',
+                data: {
+                    baseUrl: window.location.href,
+                    pathname: window.location.pathname,
+                    origin: window.location.origin,
+                    cssLoaded: false,
+                    jsLoaded: false,
+                    fontsLoaded: false,
+                    imagesLoaded: []
+                },
+                timestamp: Date.now(),
+                sessionId: 'debug-session',
+                runId: 'run1',
+                hypothesisId: 'A'
+            };
+            fetch('http://127.0.0.1:7242/ingest/9bb22711-365a-4cba-a649-3ce91773d604', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(logData)
+            }).catch(() => {});
+        })();
+        // #endregion
+    </script>
 </body>
 </html>

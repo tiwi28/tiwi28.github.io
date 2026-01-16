@@ -1,3 +1,17 @@
+// #region agent log
+fetch('http://127.0.0.1:7242/ingest/9bb22711-365a-4cba-a649-3ce91773d604',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'app.js:entry',message:'app.js loaded and executing',data:{readyState:document.readyState},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'D'})}).catch(()=>{});
+// #endregion
+
+// #region agent log
+(function() {
+    const bodyStyle = window.getComputedStyle(document.body);
+    const fontFamily = bodyStyle.getPropertyValue('font-family');
+    const backgroundColor = bodyStyle.getPropertyValue('background-color');
+    const color = bodyStyle.getPropertyValue('color');
+    fetch('http://127.0.0.1:7242/ingest/9bb22711-365a-4cba-a649-3ce91773d604',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'app.js:css-check',message:'Computed styles check',data:{fontFamily:fontFamily,backgroundColor:backgroundColor,color:color,hasCss:fontFamily.includes('JetBrains')||fontFamily.includes('Courier')},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'B'})}).catch(()=>{});
+})();
+// #endregion
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -54,11 +68,11 @@ tabButtons.forEach(button => {
 });
 
 // Add active class to navbar on scroll
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(0, 0, 0, 0.98)';
-    } else {
-        navbar.style.background = 'rgba(0, 0, 0, 0.95)';
-    }
-});
+// window.addEventListener('scroll', () => {
+//     const navbar = document.querySelector('.navbar');
+//     if (window.scrollY > 50) {
+//         navbar.style.background = 'rgba(0, 0, 0, 0.98)';
+//     } else {
+//         navbar.style.background = 'rgba(0, 0, 0, 0.95)';
+//     }
+// });
