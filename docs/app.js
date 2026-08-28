@@ -1,78 +1,63 @@
-// #region agent log
-fetch('http://127.0.0.1:7242/ingest/9bb22711-365a-4cba-a649-3ce91773d604',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'app.js:entry',message:'app.js loaded and executing',data:{readyState:document.readyState},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'D'})}).catch(()=>{});
-// #endregion
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-// #region agent log
-(function() {
-    const bodyStyle = window.getComputedStyle(document.body);
-    const fontFamily = bodyStyle.getPropertyValue('font-family');
-    const backgroundColor = bodyStyle.getPropertyValue('background-color');
-    const color = bodyStyle.getPropertyValue('color');
-    fetch('http://127.0.0.1:7242/ingest/9bb22711-365a-4cba-a649-3ce91773d604',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'app.js:css-check',message:'Computed styles check',data:{fontFamily:fontFamily,backgroundColor:backgroundColor,color:color,hasCss:fontFamily.includes('JetBrains')||fontFamily.includes('Courier')},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'B'})}).catch(()=>{});
+  /* ---- boot sequence ---- */
+  var boot  = document.getElementById('boot');
+  var lines = boot.querySelectorAll('.boot-line');
+  var bar   = boot.querySelector('.boot-bar i');
+
+  function finish(){
+    boot.classList.add('done');
+    document.body.style.overflow = '';
+  }
+
+  if (reduce) {
+    finish();
+  } else {
+    document.body.style.overflow = 'hidden';
+    bar.style.transition = 'width 1.9s steps(28, end)';
+    requestAnimationFrame(function(){ bar.style.width = '100%'; });
+    lines.forEach(function(l, i){
+      setTimeout(function(){ l.classList.add('on'); }, 260 + i * 330);
+    });
+    setTimeout(finish, 2350);
+  }
+
+  /* ---- nav appears after the title screen ---- */
+  var nav = document.getElementById('nav');
+  var hero = document.querySelector('.hero');
+  new IntersectionObserver(function(es){
+    nav.classList.toggle('show', !es[0].isIntersecting);
+  }, {rootMargin:'-70% 0px 0px 0px'}).observe(hero);
+
+  /* ---- scroll hint fades once you leave the top ---- */
+  var scrollHint = document.querySelector('.scroll-hint');
+  function toggleScrollHint(){
+    scrollHint.classList.toggle('hide', window.scrollY > 40);
+  }
+  toggleScrollHint();
+  window.addEventListener('scroll', toggleScrollHint, {passive:true});
+
+  /* ---- scroll reveals ---- */
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:.12, rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+
+  /* ---- marquee: duplicate each track so the loop is seamless ---- */
+  document.querySelectorAll('[data-marquee]').forEach(function(track){
+    var clone = track.cloneNode(true);
+    clone.classList.add('dupe');
+    clone.setAttribute('aria-hidden','true');
+    track.innerHTML += clone.innerHTML;
+  });
+
+  /* ---- rail clock ---- */
+  var clock = document.getElementById('clock');
+  function tick(){
+    clock.textContent = new Date().toLocaleTimeString('en-CA', {hour12:false});
+  }
+  tick(); setInterval(tick, 1000);
 })();
-// #endregion
-
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
-
-// Animation on scroll
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
-    });
-}, observerOptions);
-
-// Observe all fade-in elements
-document.querySelectorAll('.fade-in').forEach(el => {
-    observer.observe(el);
-});
-
-// Skills tab switching
-const tabButtons = document.querySelectorAll('.tab-btn');
-const tabContents = document.querySelectorAll('.tab-content');
-
-tabButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        // Remove active class from all buttons and contents
-        tabButtons.forEach(btn => btn.classList.remove('active'));
-        tabContents.forEach(content => content.classList.remove('active'));
-
-        // Add active class to clicked button
-        button.classList.add('active');
-
-        // Show corresponding content
-        const tabId = button.getAttribute('data-tab');
-        const content = document.getElementById(tabId);
-        if (content) {
-            content.classList.add('active');
-        }
-    });
-});
-
-// Add active class to navbar on scroll
-// window.addEventListener('scroll', () => {
-//     const navbar = document.querySelector('.navbar');
-//     if (window.scrollY > 50) {
-//         navbar.style.background = 'rgba(0, 0, 0, 0.98)';
-//     } else {
-//         navbar.style.background = 'rgba(0, 0, 0, 0.95)';
-//     }
-// });

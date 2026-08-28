@@ -1,218 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/png" href="logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" onerror="fetch('http://127.0.0.1:7242/ingest/9bb22711-365a-4cba-a649-3ce91773d604',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'index.html:css-link',message:'CSS failed to load',data:{href:'style.css',error:'Failed'},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'B'})}).catch(()=>{});" onload="fetch('http://127.0.0.1:7242/ingest/9bb22711-365a-4cba-a649-3ce91773d604',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'index.html:css-link',message:'CSS loaded successfully',data:{href:'style.css'},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'B'})}).catch(()=>{});">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tiwi Asaba</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Boluwatiwi Asaba — Software &amp; Robotics</title>
+<meta name="description" content="Second-year CS student at the University of Waterloo. Software engineering, robotics, and the AI in between.">
+<link rel="icon" type="image/png" href="logo.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Boluwatiwi Asaba — Software &amp; Robotics">
+<meta property="og:description" content="Second-year CS student at the University of Waterloo. Software engineering, robotics, and the AI in between.">
+<meta property="og:url" content="https://asaba.dev/">
+<meta property="og:image" content="https://asaba.dev/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Boluwatiwi Asaba — Software &amp; Robotics">
+<meta name="twitter:description" content="Second-year CS student at the University of Waterloo. Software engineering, robotics, and the AI in between.">
+<meta name="twitter:image" content="https://asaba.dev/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;600;800&family=Space+Grotesk:wght@400;500;700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <img src="logo.png" alt="Tiwi Asaba" class="logo-img" onerror="fetch('http://127.0.0.1:7242/ingest/9bb22711-365a-4cba-a649-3ce91773d604',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'index.html:logo-img',message:'Logo image failed to load',data:{src:'logo.png',error:'Failed'},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'C'})}).catch(()=>{});" onload="fetch('http://127.0.0.1:7242/ingest/9bb22711-365a-4cba-a649-3ce91773d604',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'index.html:logo-img',message:'Logo image loaded',data:{src:'logo.png'},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'C'})}).catch(()=>{});">
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">HOME</a></li>
-                <li><a href="https://drive.google.com/file/d/1cp0cKScSl6f44IUJgcARz_bHnQk4AQB3/view?usp=sharing" target="_blank">RESUME</a></li>
-                <li><a href="#projects">PROJECTS</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-            </ul>
-        </div>
-    </nav>
 
+<!-- hourglass mark, referenced everywhere via <use> -->
+<svg class="sprite" width="0" height="0" aria-hidden="true">
+  <symbol id="hourglass" viewBox="0 0 100 100">
+    <path d="M24 6 h52 c0 0 -18 24 -18 44 s18 44 18 44 h-52 c0 0 18 -24 18 -44 s-18 -44 -18 -44 z"/>
+  </symbol>
+</svg>
 
-    <section id="home" class="hero">
-        <div class="hero-content fade-in">
-            <div class="hero-main">
-                <div class="hero-text">
-                    <h1>Hey, I'm Tiwi 👋</h1>
-                    <p class="tagline">Building isn't just my hobby—it's my operating system.</p>
+<!-- ================= BOOT ================= -->
+<div id="boot" role="status" aria-label="Loading">
+  <div class="boot-inner">
+    <div class="boot-line">&gt; init <b>asaba.dev</b></div>
+    <div class="boot-line">&gt; mounting /projects ........ <b>ok</b></div>
+    <div class="boot-line">&gt; loading /about ........... <b>ok</b></div>
+    <div class="boot-line">&gt; calibrating actuators .... <b>ok</b></div>
+    <div class="boot-line final">[ SYSTEM STATUS: ONLINE ]</div>
+    <div class="boot-bar"><i></i></div>
+  </div>
+</div>
 
-                </div>
-                <div class="hero-image">
-                    <img src="tiwi_headshot.png" alt="Tiwi Asaba" class="headshot-img" onerror="fetch('http://127.0.0.1:7242/ingest/9bb22711-365a-4cba-a649-3ce91773d604',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'index.html:headshot-img',message:'Headshot image failed to load',data:{src:'tiwi_headshot.png',error:'Failed'},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'C'})}).catch(()=>{});" onload="fetch('http://127.0.0.1:7242/ingest/9bb22711-365a-4cba-a649-3ce91773d604',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'index.html:headshot-img',message:'Headshot image loaded',data:{src:'tiwi_headshot.png'},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'C'})}).catch(()=>{});">
-                </div>
-            </div>
-            <p class="description">I'm a first-year Computer Science student at the University of Waterloo with a passion for technology and innovation. I love tackling complex problems and am always eager to learn new technologies and frameworks.</p>
-            <p class="description">Coding is one of my favourite things to do, as well as listening to music and working out.</p>
-            <div class="social-links">
-                <a href="https://github.com/tiwi28" target="_blank" class="social-link">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z" fill="currentColor"/>
-                    </svg>
-                    GitHub
-                </a>
-                <a href="https://linkedin.com/in/tiwi-asaba" target="_blank" class="social-link">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/>
-                    </svg>
-                    LinkedIn
-                </a>
-                <a href="mailto:tiwi.asaba28@gmail.com" class="social-link">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="currentColor"/>
-                    </svg>
-                    Email
-                </a>
-            </div>
-        </div>
-    </section>
+<!-- ================= NAV ================= -->
+<nav class="nav" id="nav">
+  <a class="nav-logo" href="#" aria-label="Back to top"><img src="logo.png" alt="Tiwi Asaba"></a>
+  <div class="nav-links">
+    <a href="#projects">Projects</a>
+    <a href="https://drive.google.com/file/d/1cp0cKScSl6f44IUJgcARz_bHnQk4AQB3/view?usp=sharing" target="_blank" rel="noopener">Resume</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
 
+<!-- ================= HERO ================= -->
+<header class="hero wrap">
+  <h1>Tiwi<br><span class="thin">Asaba</span></h1>
+  <p class="tag">
+    I build software that touches the physical world — <b>robotics</b>, <b>embedded systems</b>,
+    and the <b>AI</b> that ties them together<span class="caret"></span>
+  </p>
+  <div class="scroll-hint"><span class="pixel">Scroll ↓</span></div>
+</header>
 
-    <section id="projects" class="projects-section">
-        <h2 class="section-title fade-in">PROJECTS</h2>
-        <div class="projects-grid">
-            <div class="project-card fade-in">
-                <h3>Wise-ualizer</h3>
-                <p>A Chrome extension that transforms online lectures into visual learning aids for neurodivergent students. It processes lecture content in real-time using AI, automatically generating contextual diagrams and illustrations synchronized with what's being taught. Education that adapts to how you learn best.</p>
-                <div class="project-tech">
-                    <span class="tech-tag">JavaScript</span>
-                    <span class="tech-tag">Flask</span>
-                    <span class="tech-tag">Tailwind CSS</span>
-                    <span class="tech-tag">Gemini AI</span>
-                    <span class="tech-tag">Hugging Face</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://devpost.com/software/wise-ualizer?ref_content=contribution-prompt&ref_feature=engagement&ref_medium=email&utm_campaign=contribution-prompt&utm_content=contribution_reminder&utm_medium=email&utm_source=transactional#app-team" target="_blank">Devpost</a>
-                    <a href="https://github.com/SHU8HAM1/HTVX/tree/main" target="_blank">source</a>
-                </div>
-            </div>
-            
-            <div class="project-card fade-in">
-                <h3>PL Predicts</h3>
-                <p>Developed a Random Forest regression model that uses player fantasy performance data and IRL performance trends to predict a player's accumulated Fantasy Premier League points for the next five matches.</p>
-                <div class="project-tech">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">Flask</span>
-                    <span class="tech-tag">Sci-Kit Learn</span>
-                    <span class="tech-tag">HTML/CSS</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com/tiwi28/PLPredicts" target="_blank">source</a>
-                </div>
-            </div>
+<main>
+<!-- ================= ABOUT ================= -->
+<section id="about" class="wrap about">
+  <div class="sec-head rv">
+    <h2>About Me</h2>
+  </div>
+  <div class="about-grid">
+    <div class="card-spec rv">
+      <div class="pixel card-spec-title">Current_State</div>
+      <dl>
+        <dt>School</dt><dd>University of Waterloo</dd>
+        <dt>Program</dt><dd>CS - AI Specialization</dd>
+        <dt>Year</dt><dd>2</dd>
+        <dt>Working on</dt><dd>Terrain-Adaptive Robot Navigator</dd>
+        <dt>Seeking</dt><dd>Software / robotics internships</dd>
+      </dl>
+    </div>
+    <div class="rv about-copy">
+      <p>Interested in software engineering and robotics, and how AI is reshaping both — from training my own models, to squeezing small ones onto microcontrollers, to using the big ones to chew through hard problems.</p>
 
-            <div class="project-card fade-in">
-                <h3>CETO</h3>
-                <p>A competition robot built to tackle complex game challenges through precise control and efficient design. I led the development of the robot code, developing and tuning control systems, as well as implementing autonomous routines, to ensure consistent performance during matches.</p>
-                <div class="project-tech">
-                    <span class="tech-tag">Java</span>
-                    <span class="tech-tag">WPILib</span>
-                    <span class="tech-tag">Choreo + PathPlanner</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://www.youtube.com/watch?v=DGeICIk3WPo" target="_blank">live demo</a>
-                    <a href="https://github.com/FRC3161/Reefscape2025/tree/SwerveGen" target="_blank">source</a>
-                </div>
-            </div>
-        </div>
-    </section>
+      <div class="pixel timeline-title">Experience</div>
+      <ol class="timeline">
+        <li>
+          <span class="timeline-date pixel">May 2026 — Aug 2026</span>
+          <h3>Web Developer</h3>
+          <p>University of Waterloo Library</p>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
 
+<!-- ================= PROJECTS ================= -->
+<section id="projects" class="wrap">
+  <div class="sec-head rv">
+    <h2>Projects</h2>
+  </div>
+  <div class="proj-grid rv">
 
-    <section id="about" class="skills-section">
-        <h2 class="section-title fade-in">TECH SKILLS</h2>
-        <div class="skills-tabs fade-in">
-            <button class="tab-btn active" data-tab="languages">LANGUAGES</button>
-            <button class="tab-btn" data-tab="frameworks">FRAMEWORKS</button>
-            <button class="tab-btn" data-tab="tools">LIBRARIES & TOOLS</button>
-        </div>
-        <div class="skills-content">
-            <div class="tab-content active" id="languages">
-                <div class="skill-list languages-inline">
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">Java</span>
-                    <span class="skill-tag">C#</span>
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">TypeScript</span>
-                    <span class="skill-tag">HTML</span>
-                    <span class="skill-tag">CSS</span>
-                </div>
-            </div>
-            <div class="tab-content" id="frameworks">
-                <div class="skill-list">
-                    <span class="skill-tag">React</span>
-                    <span class="skill-tag">Hono</span>
-                    <span class="skill-tag">Node.js</span>
-                    <span class="skill-tag">Flask</span>
-                    <span class="skill-tag">WPILib</span>
-                </div>
-            </div>
-            <div class="tab-content" id="tools">
-                <div class="skill-list">
-                    <span class="skill-tag">Sci-Kit Learn</span>
-                    <span class="skill-tag">Tailwind CSS</span>
-                    <span class="skill-tag">Git</span>
-                    <span class="skill-tag">Docker</span>
-                    <span class="skill-tag">GitHub</span>
-                </div>
-            </div>
-        </div>
-    </section>
+    <article class="proj">
+      <span class="pixel">Project_01</span>
+      <h3>Terrain-Adaptive Navigator</h3>
+      <p>A small rover that classifies the surface underneath it and changes how it drives — the model runs entirely on the microcontroller, no cloud round trip.</p>
+      <div class="tags"><span>TinyML</span><span>Arduino</span><span>C++</span><span>Sensor fusion</span></div>
+    </article>
 
+    <article class="proj">
+      <span class="pixel">Project_02</span>
+      <h3>Adaptive Learning Platform</h3>
+      <p>Reads course material and generates practice that adapts to what a student keeps getting wrong. Built in 36 hours at the CxC AI Hackathon.</p>
+      <div class="tags"><span>NLP</span><span>Transformers</span><span>Flask</span></div>
+    </article>
 
-    <section id="contact" class="contact-section">
-        <div class="contact-content fade-in">
-            <h2 class="section-title">LET'S CONNECT</h2>
-            <p>I'm always open to discussing new opportunities, collaborating on projects, or just having a conversation about technology!</p>
-        </div>
+    <article class="proj">
+      <span class="pixel">Project_03</span>
+      <h3>Reading Assistant Extension</h3>
+      <p>A browser extension that restructures dense web pages for neurodivergent readers — summaries, chunking, and tone adjustment on any page.</p>
+      <div class="tags"><span>Chrome API</span><span>Hugging Face</span><span>JavaScript</span></div>
+    </article>
 
-        <div class="social-links">
-                <a href="https://github.com/tiwi28" target="_blank" class="social-link">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z" fill="currentColor"/>
-                    </svg>
-                    GitHub
-                </a>
-                <a href="https://linkedin.com/in/tiwi-asaba" target="_blank" class="social-link">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/>
-                    </svg>
-                    LinkedIn
-                </a>
-                <a href="mailto:tiwi.asaba28@gmail.com" class="social-link">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="currentColor"/>
-                    </svg>
-                    Email
-                </a>
-            </div>
-    </section>
+    <article class="proj">
+      <span class="pixel">Project_04</span>
+      <h3>Premier League Predictor</h3>
+      <p>A Random Forest trained on match history that predicts fixtures, wrapped in a frontend that shows why it made each call.</p>
+      <div class="tags"><span>scikit-learn</span><span>React</span><span>Flask</span></div>
+    </article>
 
+  </div>
+</section>
 
-    <script src="app.js" onerror="fetch('http://127.0.0.1:7242/ingest/9bb22711-365a-4cba-a649-3ce91773d604',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'index.html:js-script',message:'app.js failed to load',data:{src:'app.js',error:'Failed'},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'D'})}).catch(()=>{});"></script>
-    <script>
-        // #region agent log
-        (function() {
-            const logData = {
-                location: 'index.html:page-load',
-                message: 'Page loaded - checking resource availability',
-                data: {
-                    baseUrl: window.location.href,
-                    pathname: window.location.pathname,
-                    origin: window.location.origin,
-                    cssLoaded: false,
-                    jsLoaded: false,
-                    fontsLoaded: false,
-                    imagesLoaded: []
-                },
-                timestamp: Date.now(),
-                sessionId: 'debug-session',
-                runId: 'run1',
-                hypothesisId: 'A'
-            };
-            fetch('http://127.0.0.1:7242/ingest/9bb22711-365a-4cba-a649-3ce91773d604', {
-                method: 'POST',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify(logData)
-            }).catch(() => {});
-        })();
-        // #endregion
-    </script>
+<!-- ================= STACK ================= -->
+<section id="stack" class="wrap">
+  <div class="sec-head rv">
+    <h2>Tech I Use</h2>
+  </div>
+  <div class="rows">
+    <div>
+      <div class="row-label">Languages</div>
+      <div class="marquee"><div class="track" data-marquee>
+        <span class="chip chip-icon"><img src="images/tech/python.svg" alt="Python" title="Python"></span>
+        <span class="chip chip-icon"><img src="images/tech/cplusplus.svg" alt="C++" title="C++"></span>
+        <span class="chip chip-icon"><img src="images/tech/javascript.svg" alt="JavaScript" title="JavaScript"></span>
+        <span class="chip chip-icon"><img src="images/tech/typescript.svg" alt="TypeScript" title="TypeScript"></span>
+        <span class="chip chip-icon"><img src="images/tech/lua.svg" alt="Lua" title="Lua"></span>
+        <span class="chip chip-icon"><img src="images/tech/html5.svg" alt="HTML" title="HTML"></span>
+        <span class="chip chip-icon"><img src="images/tech/css3.svg" alt="CSS" title="CSS"></span>
+      </div></div>
+    </div>
+    <div>
+      <div class="row-label">Libraries &amp; Frameworks</div>
+      <div class="marquee"><div class="track rev" data-marquee>
+        <span class="chip chip-icon"><img src="images/tech/pytorch.svg" alt="PyTorch" title="PyTorch"></span>
+        <span class="chip chip-icon"><img src="images/tech/huggingface.svg" alt="Hugging Face" title="Hugging Face"></span>
+        <span class="chip chip-icon"><img src="images/tech/scikitlearn.svg" alt="scikit-learn" title="scikit-learn"></span>
+        <span class="chip chip-icon"><img src="images/tech/numpy.svg" alt="NumPy" title="NumPy"></span>
+        <span class="chip chip-icon"><img src="images/tech/pandas.svg" alt="Pandas" title="Pandas"></span>
+        <span class="chip chip-icon"><img src="images/tech/opencv.svg" alt="OpenCV" title="OpenCV"></span>
+        <span class="chip chip-icon"><img src="images/tech/react.svg" alt="React" title="React"></span>
+        <span class="chip chip-icon"><img src="images/tech/flask.svg" alt="Flask" title="Flask"></span>
+        <span class="chip chip-icon"><img src="images/tech/fastapi.svg" alt="FastAPI" title="FastAPI"></span>
+        <span class="chip chip-icon"><img src="images/tech/nodedotjs.svg" alt="Node.js" title="Node.js"></span>
+      </div></div>
+    </div>
+    <div>
+      <div class="row-label">Tools</div>
+      <div class="marquee"><div class="track" data-marquee>
+        <span class="chip chip-icon"><img src="images/tech/git.svg" alt="Git" title="Git"></span>
+        <span class="chip chip-icon"><img src="images/tech/linux.svg" alt="Linux" title="Linux"></span>
+        <span class="chip chip-icon"><img src="images/tech/gnubash.svg" alt="Bash" title="Bash"></span>
+        <span class="chip chip-icon"><img src="images/tech/vim.svg" alt="Vim" title="Vim"></span>
+        <span class="chip chip-icon"><img src="images/tech/docker.svg" alt="Docker" title="Docker"></span>
+        <span class="chip chip-icon"><img src="images/tech/vercel.svg" alt="Vercel" title="Vercel"></span>
+        <span class="chip chip-icon"><img src="images/tech/render.svg" alt="Render" title="Render"></span>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="wrap">
+  <div class="sec-head rv">
+    <h2>Contact</h2>
+  </div>
+  <nav class="contact-list rv">
+    <a href="mailto:tiwi.asaba28@gmail.com">Email <span class="who">tiwi.asaba28@gmail.com</span></a>
+    <a href="https://github.com/tiwi28" target="_blank" rel="noopener">GitHub <span class="who">Code and experiments</span></a>
+    <a href="https://linkedin.com/in/tiwi-asaba" target="_blank" rel="noopener">LinkedIn <span class="who">The formal version</span></a>
+    <a href="https://drive.google.com/file/d/1cp0cKScSl6f44IUJgcARz_bHnQk4AQB3/view?usp=sharing" target="_blank" rel="noopener">Resume <span class="who">PDF, one page</span></a>
+  </nav>
+</section>
+</main>
+
+<!-- ================= RAIL ================= -->
+<div class="rail">
+  <span class="live"><svg class="mark" viewBox="0 0 100 100"><use href="#hourglass"/></svg> Online</span>
+  <span class="mid">Boluwatiwi Asaba / Software &amp; Robotics</span>
+  <span id="clock">--:--:--</span>
+</div>
+<script src="app.js" defer></script>
 </body>
 </html>
