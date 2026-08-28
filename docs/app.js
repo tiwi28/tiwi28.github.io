@@ -46,12 +46,26 @@
   }, {threshold:.12, rootMargin:'0px 0px -8% 0px'});
   document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
 
-  /* ---- marquee: duplicate each track so the loop is seamless ---- */
+  /* ---- marquee: pad + duplicate each track so the loop is always seamless ---- */
   document.querySelectorAll('[data-marquee]').forEach(function(track){
-    var clone = track.cloneNode(true);
-    clone.classList.add('dupe');
-    clone.setAttribute('aria-hidden','true');
-    track.innerHTML += clone.innerHTML;
+    var marquee = track.parentElement;
+    var originalChildren = Array.prototype.slice.call(track.children);
+
+    function appendUnit(){
+      originalChildren.forEach(function(child){
+        var copy = child.cloneNode(true);
+        copy.setAttribute('aria-hidden', 'true');
+        track.appendChild(copy);
+      });
+    }
+
+    /* pad with extra copies until a single lap covers the visible width,
+       so the wrap-around point is never on screen at the same time as the start */
+    while (track.scrollWidth < marquee.clientWidth) appendUnit();
+
+    /* duplicate that whole padded lap once more, so translateX(-50%) is exact */
+    var lapWidth = track.scrollWidth;
+    while (track.scrollWidth < lapWidth * 2) appendUnit();
   });
 
   /* ---- rail clock ---- */

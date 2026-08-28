@@ -197,6 +197,8 @@ section{padding-block:clamp(80px,12vw,150px); position:relative; z-index:1}
 }
 .contact-list a:hover{padding-left:20px; color:var(--green); text-shadow:0 0 18px var(--glow-hi)}
 .contact-list .who{margin-left:auto; font-family:var(--f-body); font-size:.85rem; font-weight:400; text-transform:none; letter-spacing:0; color:var(--muted)}
+.ext-arrow{width:22px; height:22px; flex-shrink:0; margin-left:auto; color:var(--fg); transition:color .3s, transform .3s}
+.contact-list a:hover .ext-arrow{color:var(--green); transform:translate(3px,-3px)}
 
 /* STATUS RAIL */
 .rail{
