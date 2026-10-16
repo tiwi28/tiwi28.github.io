@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Boluwatiwi Asaba — Software &amp; Robotics</title>
-<meta name="description" content="Second-year CS student at the University of Waterloo. Software engineering, robotics, and the AI in between.">
+<title>Tiwi Asaba — Full-Stack &amp; AI/ML</title>
+<meta name="description" content="Second-year CS student at the University of Waterloo building full-stack applications with AI/ML at their core.">
 <link rel="icon" type="image/png" href="logo.png">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Boluwatiwi Asaba — Software &amp; Robotics">
-<meta property="og:description" content="Second-year CS student at the University of Waterloo. Software engineering, robotics, and the AI in between.">
+<meta property="og:title" content="Boluwatiwi Asaba — Full-Stack &amp; AI/ML">
+<meta property="og:description" content="Second-year CS student at the University of Waterloo building full-stack applications with AI/ML at their core.">
 <meta property="og:url" content="https://asaba.dev/">
 <meta property="og:image" content="https://asaba.dev/logo.png">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Boluwatiwi Asaba — Software &amp; Robotics">
-<meta name="twitter:description" content="Second-year CS student at the University of Waterloo. Software engineering, robotics, and the AI in between.">
+<meta name="twitter:title" content="Boluwatiwi Asaba — Full-Stack &amp; AI/ML">
+<meta name="twitter:description" content="Second-year CS student at the University of Waterloo building full-stack applications with AI/ML at their core.">
 <meta name="twitter:image" content="https://asaba.dev/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,7 +35,7 @@
     <div class="boot-line">&gt; init <b>asaba.dev</b></div>
     <div class="boot-line">&gt; mounting /projects ........ <b>ok</b></div>
     <div class="boot-line">&gt; loading /about ........... <b>ok</b></div>
-    <div class="boot-line">&gt; calibrating actuators .... <b>ok</b></div>
+    <div class="boot-line">&gt; loading models ........... <b>ok</b></div>
     <div class="boot-line final">[ SYSTEM STATUS: ONLINE ]</div>
     <div class="boot-bar"><i></i></div>
   </div>
@@ -55,8 +55,8 @@
 <header class="hero wrap">
   <h1>Tiwi<br><span class="thin">Asaba</span></h1>
   <p class="tag">
-    I build software that touches the physical world — <b>robotics</b>, <b>embedded systems</b>,
-    and the <b>AI</b> that ties them together<span class="caret"></span>
+    I build <b>full-stack applications</b> and bring <b>AI/ML</b> into them —
+    turning models into products people actually use<span class="caret"></span>
   </p>
   <div class="scroll-hint"><span class="pixel">Scroll ↓</span></div>
 </header>
@@ -74,12 +74,12 @@
         <dt>School</dt><dd>University of Waterloo</dd>
         <dt>Program</dt><dd>CS - AI Specialization</dd>
         <dt>Year</dt><dd>2</dd>
-        <dt>Working on</dt><dd>Terrain Adaptive Robot Navigator</dd>
-        <dt>Seeking</dt><dd>Software / robotics internships</dd>
+        <dt>Working on</dt><dd><a href="https://github.com/tiwi28/Ekko" target="_blank" rel="noopener">Ekko</a> — a daily tech news digest for aspiring software engineers</dd>
+        <dt>Seeking</dt><dd>Full-stack / ML internships</dd>
       </dl>
     </div>
     <div class="rv about-copy">
-      <p>Interested in software engineering and robotics, and how AI is reshaping both — from training my own models, to squeezing small ones onto microcontrollers, to using the big ones to chew through hard problems.</p>
+      <p>What drives me is building full-stack applications end to end — the database, the API, and the interface someone actually clicks through. The part I get most excited about is bringing AI/ML into that stack: training and fine-tuning my own models, then wiring them into real products so they solve problems instead of sitting in a notebook.</p>
 
       <div class="pixel timeline-title">Experience</div>
       <ol class="timeline">
@@ -98,34 +98,48 @@
   <div class="sec-head rv">
     <h2>Projects</h2>
   </div>
+  <div class="proj-filter rv" role="group" aria-label="Filter projects">
+    <button type="button" class="active" data-filter="all" aria-pressed="true">All</button>
+    <button type="button" data-filter="software" aria-pressed="false">Software</button>
+    <button type="button" data-filter="fullstack" aria-pressed="false">Full Stack</button>
+    <button type="button" data-filter="ml" aria-pressed="false">ML</button>
+    <button type="button" data-filter="hardware" aria-pressed="false">Hardware</button>
+  </div>
   <div class="proj-grid rv">
 
-    <article class="proj">
+    <article class="proj" data-cat="hardware ml">
       <span class="pixel">Project_01</span>
       <h3>Terrain Adaptive Robot Navigator</h3>
       <p>A 2WD chassis that classifies the surface underneath it, changing the way it drives — running entirely on the microcontroller.</p>
       <div class="tags"><span>TinyML</span><span>Arduino</span><span>C++</span><span>Sensor fusion</span></div>
     </article>
 
-    <article class="proj">
+    <article class="proj" data-cat="software fullstack ml">
       <span class="pixel">Project_02</span>
       <h3>TruLearn</h3>
       <p>Reads course material and generates practice that adapts to gauge a student's actual understanding, not just memorization. Built in 36 hours at the CxC AI Hackathon.</p>
       <div class="tags"><span>NLP</span><span>Transformers</span><span>Flask</span></div>
     </article>
 
-    <article class="proj">
+    <article class="proj" data-cat="software ml">
       <span class="pixel">Project_03</span>
       <h3>Wiseualizer</h3>
       <p>A digital accessibility tool generating AI-powered visual aids from lecture content, addressing a real unmet need for neurodivergent learners.</p>
       <div class="tags"><span>Chrome API</span><span>Hugging Face</span><span>JavaScript</span></div>
     </article>
 
-    <article class="proj">
+    <article class="proj" data-cat="software fullstack ml">
       <span class="pixel">Project_04</span>
       <h3>PL Predicts</h3>
       <p>A Random Forest regression model trained on match history that predicts how many points a player will generate over their next 5 games.</p>
       <div class="tags"><span>scikit-learn</span><span>React</span><span>Flask</span></div>
+    </article>
+
+    <article class="proj" data-cat="software fullstack ml">
+      <span class="pixel">Project_05</span>
+      <h3>Ekko</h3>
+      <p>A daily tech news digest for aspiring software engineers. Each day it gathers the most relevant stories, summarises them, and explains why they matter for a growing software career — with a simple todo list built in.</p>
+      <div class="tags"><span>React</span><span>FastAPI</span><span>PostgreSQL</span></div>
     </article>
 
   </div>
@@ -196,7 +210,7 @@
 <!-- ================= RAIL ================= -->
 <div class="rail">
   <span class="live"><svg class="mark" viewBox="0 0 100 100"><use href="#hourglass"/></svg> Online</span>
-  <span class="mid">Boluwatiwi Asaba / Software &amp; Robotics</span>
+  <span class="mid">Boluwatiwi Asaba / Full-Stack &amp; AI/ML</span>
   <span id="clock">--:--:--</span>
 </div>
 <script src="app.js" defer></script>
