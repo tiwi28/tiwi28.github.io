@@ -174,6 +174,15 @@ section{padding-block:clamp(80px,12vw,150px); position:relative; z-index:1}
   transition:width .35s cubic-bezier(.2,.8,.2,1);
 }
 .proj:hover::after{width:100%}
+.proj-link{
+  position:absolute; top:clamp(24px,3vw,34px); right:clamp(24px,3vw,34px);
+  display:flex; align-items:center; gap:6px;
+  font-family:var(--f-display); font-size:11px; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--muted); text-decoration:none; transition:color .2s;
+}
+.proj-link .ext-arrow{width:14px; height:14px; margin-left:0; color:inherit}
+.proj-link:hover{color:var(--green)}
+.proj-link:hover .ext-arrow{transform:translate(2px,-2px)}
 .proj h3{font-family:var(--f-display); font-weight:600; font-size:1.5rem; margin:14px 0 10px; line-height:1.15}
 .proj p{margin:0 0 20px; color:var(--muted); font-size:.98rem}
 .proj .tags{margin-top:auto; display:flex; flex-wrap:wrap; gap:8px}
